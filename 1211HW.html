@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>107304020</title>
+</head>
+<body>
+	<script>
+		var rand  = Math.floor((Math.random()*10)+1)
+		var guess = window.prompt("Guess an integer from 1 to 10!")
+		guess = parseInt(guess)
+		while(rand != guess) {
+			if(guess>rand) {
+				alert("太大了~")
+				var guess = window.prompt("Guess an integer from 1 to 10!")
+				guess = parseInt(guess)
+			}
+			else {
+				alert("太小了~")
+				var guess = window.prompt("Guess an integer from 1 to 10!")
+				guess = parseInt(guess)
+			}
+		}
+	
+		alert("Congratulation! You are right!")
+	
+		
+	</script>
+
+</body>
+</html>
