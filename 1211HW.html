@@ -6,25 +6,23 @@
 <body>
 	<script>
 		var rand  = Math.floor((Math.random()*10)+1)
-		var guess = window.prompt("Guess an integer from 1 to 10!")
-		guess = parseInt(guess)
-		while(rand != guess) {
-			if(guess>rand) {
-				alert("太大了~")
-				var guess = window.prompt("Guess an integer from 1 to 10!")
-				guess = parseInt(guess)
+		while(true) {
+		    var guess = window.prompt("Guess an integer from 1 to 10!")
+		    var number = parseInt(guess)
+		    if(number==rand) {
+				alert("Congratulation! You are right!")
+				break
 			}
-			else {
-				alert("太小了~")
-				var guess = window.prompt("Guess an integer from 1 to 10!")
-				guess = parseInt(guess)
+			else if (number>rand) {
+				alert("Too big~")
 			}
+			else if (number<rand) {
+				alert("Too small~")
+			}
+		    else if (!number) {
+		    	alert("Please enter the correct form.")
+		    }
 		}
-	
-		alert("Congratulation! You are right!")
-	
-		
 	</script>
-
 </body>
 </html>
